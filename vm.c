@@ -34,7 +34,6 @@ int main()
 	val.as.floating = 11.3;
 
 	const_table_push(&const_table, val);
-	// const_table_push(&const_table, val);
 
 	// globals_set(&globals, "b", val);
 	// printf("from globals: %f\n", globals_get(&globals, "b").as.floating);
@@ -48,7 +47,6 @@ int main()
 
 	vm_exec(&vm);
 
-	puts("yahoo");
 	printf("%f\n", stack_pop(vm.stack).as.floating);
 	printf("bc: %hhu\n", frame_stack_peek(vm.frame_stack)->bytecode[2]);
 
