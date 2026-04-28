@@ -119,7 +119,7 @@ static inline uint32_t get_hash(ObjString *str)
     return str->hash;
 }
 
-static inline ObjFunction* new_function(Bytecode *bytecode, size_t arity, char *name)
+static inline ObjFunction* new_function(Bytecode *bytecode, size_t arity, ObjString *name)
 {
     ObjFunction *func = malloc(sizeof(ObjFunction));
 
@@ -130,7 +130,7 @@ static inline ObjFunction* new_function(Bytecode *bytecode, size_t arity, char *
 
     init_obj((Obj*)func, TypeString);
 
-    func->name = new_string(name);
+    func->name = name;
     func->arity = arity;
     func->bytecode = bytecode;
 

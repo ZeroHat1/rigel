@@ -2,4 +2,4 @@
 
 #include <stdint.h>
 
-typedef uint8_t Bytecode; // bc - bytecode
+typedef uint8_t Bytecode;

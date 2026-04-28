@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -g -Wall -std=c11
 TARGET = app
-SRCS = vm_opcodes.c vm_const_table.c vm_stack.c vm_state.c vm.c table.c vm_globals.c vm_frame.c
+SRCS = vm_opcodes.c vm_const_table.c vm.c table.c vm_frame.c
 OBJDIR = obj
 OBJS = $(patsubst %.c,$(OBJDIR)/%.o,$(SRCS))
 RM = rm -f

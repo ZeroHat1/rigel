@@ -3,6 +3,7 @@
 #include <stdlib.h>
 
 #include "vm_frame.h"
+#include "raise.h"
 #include "vm_types.h"
 
 int frame_stack_expand(FrameStack *stack)
@@ -13,7 +14,7 @@ int frame_stack_expand(FrameStack *stack)
 
 	if (!new_data)
 	{
-		fprintf(stderr, "Memory allocation error\n");
+		raise_exception();
         return 1;
 	}
 

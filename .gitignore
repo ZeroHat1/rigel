@@ -1,0 +1,5 @@
+build.py
+compile_commands.json
+app
+obj/
+.cache

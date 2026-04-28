@@ -34,6 +34,41 @@ static inline TValue new_value(ValueType type) // don't use with a pointer type
     return val;
 }
 
+static inline TValue new_integer(int64_t integer)
+{
+    TValue val;
+    val.type = VAL_INT;
+    val.as.integer = integer;
+
+    return val;
+}
+
+static inline TValue new_floating(double floating)
+{
+    TValue val;
+    val.type = VAL_FLOAT;
+    val.as.floating = floating;
+
+    return val;
+}
+
+static inline TValue new_boolean(bool boolean)
+{
+    TValue val;
+    val.type = VAL_BOOL;
+    val.as.boolean = boolean;
+
+    return val;
+}
+
+static inline TValue new_nil(bool boolean)
+{
+    TValue val;
+    val.type = VAL_NIL;
+
+    return val;
+}
+
 static inline TValue new_pointer(void *pointer)
 {
     TValue val;

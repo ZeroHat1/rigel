@@ -8,7 +8,12 @@ typedef enum
 	LOAD_TRUE,
 	LOAD_FALSE,
 	LOAD_NIL,
-	END
+	PRINT,
+	BINARY_ADD,
+	BINARY_SUB,
+	BINARY_MUL,
+	BINARY_DIV,
+	HALT
 } Instruction_Name;
 
 void vm_exec(VM *vm);

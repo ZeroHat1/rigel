@@ -1,11 +1,21 @@
 #pragma once
 
 #include "vm_value.h"
+#include "table.h"
 
 typedef struct Table Table;
 
-int globals_init(Table *globals);
+int globals_init(Table *globals)
+{
+	return table_init(globals);
+}
 
-TValue globals_get(Table *globals, TValue key);
+TValue globals_get(Table *globals, TValue key)
+{
+	return table_get(globals, key);
+}
 
-int globals_set(Table *globals, TValue key, TValue value);
+int globals_set(Table *globals, TValue key, TValue value)
+{
+	return table_set(globals, key, value);
+}
